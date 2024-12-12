@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# 이현우의 포트폴리오 웹사이트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 프로젝트 소개
 
-Currently, two official plugins are available:
+이 프로젝트는 React와 TypeScript를 사용하여 구현한 개인 포트폴리오 웹사이트입니다. 아토믹 디자인 패턴을 적용하여 컴포넌트를 체계적으로 구조화했으며, 세련된 UI/UX를 구현했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 주요 기능
 
-## Expanding the ESLint configuration
+- 반응형 디자인으로 모든 디바이스에서 최적화된 경험 제공
+- Framer Motion을 활용한 부드러운 애니메이션 효과
+- 다크 테마 기반의 세련된 UI 디자인
+- 직관적인 네비게이션과 스크롤 인터랙션
+- 포트폴리오 섹션별 상세 정보 제공
+  - 자기소개
+  - 핵심 역량
+  - 경력 사항
+  - 보유 기술
+  - 교육 이력
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 기술 스택
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Intersection Observer
+- React Responsive
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 프로젝트 구조
