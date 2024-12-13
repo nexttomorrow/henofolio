@@ -118,8 +118,8 @@ const ResumeSection: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* 교육 섹션 */}
-            <motion.div 
+            {/* 교육 섹션 - 주석 처리 */}
+            {/* <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -139,8 +139,8 @@ const ResumeSection: React.FC = () => {
                 <p className="text-gray-400 text-lg mt-2">해병대</p>
                 <p className="text-accent mt-1">2010.05 - 2012.02</p>
               </div>
+            </motion.div> */}
 
-            </motion.div>
           </div>
         </motion.div>
       </div>

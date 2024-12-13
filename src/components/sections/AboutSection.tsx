@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import BearProfile from '../atoms/BearProfile';
 import ScrollIndicator from '../atoms/ScrollIndicator';
 import SnowEffect from '../atoms/SnowEffect';
+import useTypewriter from '../../hooks/useTypewriter';
 
 const AboutSection: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -10,6 +11,9 @@ const AboutSection: React.FC = () => {
   const textRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
 
+  const introText = "안녕하세요! 저는 패키지부터 웹, UI/UX까지 다양한 디자인 분야를 넘나들며 즐겁게 일하고 있어요. 12개의 멋진 프로젝트와 2번의 리드 경험을 통해 사용자의 마음을 읽고 비즈니스 가치를 만들어내는 일에 푹 빠져있죠. 제가 가장 자신있는 건, 사용자와 비즈니스 사이에서 완벽한 균형을 맞추는 디자인을 만드는 거예요!";
+  
+  const { displayText, isTypingComplete } = useTypewriter(introText, 30);
 
   useEffect(() => {
     // 페이지 로드 시 About 섹션으로 스크롤
@@ -102,10 +106,8 @@ const AboutSection: React.FC = () => {
                 </div>
 
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-4 max-w-2xl mx-auto lg:mx-0">
-                  <span className="text-gradient font-semibold">패키지, 웹, UI/UX 디자인</span>을 아우르는 
-                  폭넓은 경험을 바탕으로, 12개의 대규모 프로젝트와 2개의 리드 경험을 통해 
-                  사용자의 니즈를 정확히 파악하고 비즈니스 성과를 창출하는 솔루션을 제시합니다.
-                  유저와 비즈니스의 접점에서 최적의 경험을 설계하는 것이 저의 전문성입니다.
+                  {displayText ??''}
+                  {!isTypingComplete}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
